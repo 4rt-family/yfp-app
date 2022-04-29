@@ -1,9 +1,7 @@
 import LayoutMain from 'layouts/layouts/layout-main';
 
 const Home = () => (
-  <LayoutMain>
-
-  </LayoutMain>
+  <LayoutMain />
 );
 
 export default Home;

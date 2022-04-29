@@ -1,5 +1,5 @@
-import Seo from 'components/shared/seo';
 import Header from 'components/shared/header';
+import Seo from 'components/shared/seo';
 
 const LayoutMain = ({ children }) => (
   <>
