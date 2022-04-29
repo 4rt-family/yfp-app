@@ -15,10 +15,10 @@ module.exports = {
       inherit: colors.inherit,
       current: colors.current,
       transparent: colors.transparent,
+      // add custom colors tailwind here
       gray: '#E5E5E5',
       black: '#000000',
       white: '#FFFFFF',
-
     }),
     screens: {
       '2xl': { max: '1919px' },

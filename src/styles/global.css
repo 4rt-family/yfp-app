@@ -3,5 +3,6 @@
   body {
     @apply min-w-[320px] font-sans antialiased;
     -webkit-tap-highlight-color: transparent;
+    background-color: #e5e5e5;
   }
 }
