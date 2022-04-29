@@ -9,7 +9,7 @@ const LayoutMain = ({ children }) => (
     <Header />
     <Seo />
     <main>{children}</main>
-    <Footer />
+    <Footer telegram="хуй а не тг" />
   </>
 );
 LayoutMain.propTypes = {
