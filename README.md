@@ -17,7 +17,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 1. Clone this repository
 
 ```bash
-git clone git@github.com
+git clone git@github.com:your-favorite-pasta/yfr-app.git
 ```
 
 2. Install dependencies
@@ -44,7 +44,6 @@ To learn more about Next.js, take a look at the following resources:
 - [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
 
 ## Project Structure
 
