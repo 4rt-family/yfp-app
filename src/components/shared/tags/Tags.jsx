@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 
 const Tags = ({ tags }) => (
   <div className="flex justify-center py-[10px]">
-    {tags &
+    {tags.length > 0 &&
       tags.map((text) => (
         <div className="m-[5px] rounded-[50px] bg-gray px-[8px] py-[5px] text-sm">{text}</div>
       ))}
