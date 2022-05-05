@@ -5,16 +5,16 @@ import AddSVG from './images/add.url.svg';
 import RefreshSVG from './images/refresh.url.svg';
 
 const Header = () => (
-  <header className="container pt-[70px] pb-[20px] text-center">
-    <h1 className="mx-auto w-80 break-words text-xl font-bold uppercase leading-[2.7rem]">
+  <header className="container pt-18 pb-5 text-center">
+    <h1 className="mx-auto w-80 break-words text-xl font-bold uppercase leading-11">
       You favorite pasta
     </h1>
-    <div className="flex pt-[40px]">
+    <div className="flex pt-10">
       <div className="my-auto flex-1">
-        <Image className="" src={RefreshSVG} width={30} height={30} />
-        <span className="ml-[20px] align-super text-[20px] uppercase">Другая паста</span>
+        <Image src={RefreshSVG} width={30} height={30} />
+        <span className="text-5 ml-5 align-super uppercase">Другая паста</span>
       </div>
-      <Image className="" src={AddSVG} width={70} height={70} />
+      <Image src={AddSVG} width={70} height={70} />
     </div>
   </header>
 );
