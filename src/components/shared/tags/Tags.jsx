@@ -1,10 +1,10 @@
 import PropTypes from 'prop-types';
 
 const Tags = ({ tags }) => (
-  <div className="flex justify-center py-[10px]">
-    {tags &
+  <div className="flex justify-center py-2.5">
+    {tags.length > 0 &&
       tags.map((text) => (
-        <div className="m-[5px] rounded-[50px] bg-gray px-[8px] py-[5px] text-sm">{text}</div>
+        <div className="m-1.5 rounded-[50px] bg-gray px-2 py-1.5 text-sm">{text}</div>
       ))}
   </div>
 );

@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 const Footer = ({ telegram }) => (
-  <footer className="py-[60px] text-center text-sm underline">
+  <footer className="py-15 text-center text-sm underline">
     <a href={telegram}>Написать нам в телеграм</a>
   </footer>
 );
