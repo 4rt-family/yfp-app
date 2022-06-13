@@ -15,7 +15,7 @@ const Home = () => {
 
   return (
     <LayoutMain setRandomPost={setRandomPost}>
-      <Post title={post.title} article={post.article} tags={post.tags} />
+      <Post title={post.title} article={post.article} tags={post.tags}/>
     </LayoutMain>
   );
 };
