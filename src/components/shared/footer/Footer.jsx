@@ -1,4 +1,5 @@
 import PropTypes from 'prop-types';
+import React from 'react';
 
 const Footer = ({ telegram }) => (
   <footer className="py-15 text-center text-sm underline">
@@ -8,9 +9,6 @@ const Footer = ({ telegram }) => (
 
 Footer.propTypes = {
   telegram: PropTypes.string.isRequired,
-};
-Footer.defaultProps = {
-  telegram: '',
 };
 
 export default Footer;
