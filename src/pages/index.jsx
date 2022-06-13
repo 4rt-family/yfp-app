@@ -1,10 +1,10 @@
 /* eslint-disable react-hooks/exhaustive-deps */
 
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
-import Post from 'components/shared/post';
-import useRandomPost from 'components/shared/post/useRandomPost';
-import LayoutMain from 'layouts/layouts/layout-main';
+import Post from "components/shared/post";
+import useRandomPost from "components/shared/post/useRandomPost";
+import LayoutMain from "layouts/layouts/layout-main";
 
 const Home = () => {
   const [post, setRandomPost] = useRandomPost();
@@ -14,9 +14,9 @@ const Home = () => {
   }, []);
 
   return (
-    <LayoutMain setRandomPost={setRandomPost}>
-      <Post title={post.title} article={post.article} tags={post.tags}/>
-    </LayoutMain>
+      <LayoutMain setRandomPost={setRandomPost}>
+        <Post title={post.title} article={post.article} tags={post.tags} />
+      </LayoutMain>
   );
 };
 
