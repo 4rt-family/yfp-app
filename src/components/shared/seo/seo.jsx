@@ -2,7 +2,7 @@ import Head from 'next/head';
 
 const Seo = () => (
   <Head>
-    <title>Create Next App</title>
+    <title>you favorite pasta</title>
     <link rel="icon" href="/favicon.ico" />
   </Head>
 );
