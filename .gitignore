@@ -33,8 +33,12 @@ yarn-error.log*
 
 # vercel
 .vercel
-.vscode/snipsnap.code-snippets
 
-#linters
+
+# linters
 .stylelintcache
 .eslintcache
+
+# editors
+.idea
+.vscode
