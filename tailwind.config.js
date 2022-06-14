@@ -4,6 +4,8 @@ module.exports = {
     container: false,
   },
   theme: {
+    mono: ['IBM Plex Mono', 'monospace'],
+    serif: ['Open Sans', 'sans-serif'],
     fontSize: {
       xl: '64px',
       lg: '48px',
@@ -79,8 +81,8 @@ module.exports = {
       lg: { max: '1279px' },
       md: { max: '1023px' },
       sm: { max: '767px' },
-      xs: { max: '359px' },
+      xs: { max: '432px' },
     },
   },
-  plugins: [require('tailwindcss-safe-area')],
+  plugins: [require('tailwindcss-safe-area'),require('@tailwindcss/forms'),],
 };

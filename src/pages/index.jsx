@@ -1,36 +1,22 @@
-import React, { useEffect, useState } from 'react';
+/* eslint-disable react-hooks/exhaustive-deps */
 
-import LayoutMain from 'layouts/layouts/layout-main';
+import React, { useEffect } from "react";
 
-import Post from '../components/shared/post';
+import Post from "components/shared/post";
+import useRandomPost from "hooks/useRandomPost";
+import LayoutMain from "layouts/layouts/layout-main";
 
 const Home = () => {
-  const [data, setData] = useState({
-    article: '',
-    title: '',
-    tags: [],
-  });
-
-  function getRandomPasta() {
-    return fetch('/api/pasta')
-      .then((data) => data.json())
-      .then(({ data }) => {
-        setData({
-          title: data.Title,
-          article: data.Content,
-          tags: data.Tags ? data.Tags : [],
-        });
-      });
-  }
+  const [post, setRandomPost] = useRandomPost();
 
   useEffect(() => {
-    getRandomPasta();
+    setRandomPost();
   }, []);
 
   return (
-    <LayoutMain>
-      <Post title={data.title} article={data.article} tags={data.tags} />
-    </LayoutMain>
+      <LayoutMain setRandomPost={setRandomPost}>
+        <Post title={post.title} article={post.article} tags={post.tags} />
+      </LayoutMain>
   );
 };
 

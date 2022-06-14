@@ -1,3 +1,4 @@
+import React from 'react';
 import 'styles/main.css';
 
 // eslint-disable-next-line react/prop-types

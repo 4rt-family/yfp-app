@@ -1,22 +1,42 @@
-import Image from 'next/image';
-import React from 'react';
+import Image from "next/image";
+import Link from "next/link";
+import PropTypes from "prop-types";
+import React from "react";
+import { usePromiseTracker } from "react-promise-tracker";
 
-import AddSVG from './images/add.url.svg';
-import RefreshSVG from './images/refresh.url.svg';
+import AddSVG from "./images/add.url.svg";
+import RefreshSVG from "./images/refresh.url.svg";
 
-const Header = () => (
-  <header className="container pt-18 pb-5 text-center">
-    <h1 className="mx-auto w-80 break-words text-xl font-bold uppercase leading-11">
-      You favorite pasta
-    </h1>
-    <div className="flex pt-10">
-      <div className="my-auto flex-1">
-        <Image src={RefreshSVG} width={30} height={30} />
-        <span className="text-5 ml-5 align-super uppercase">Другая паста</span>
+
+const Header = ({ setRandomPost }) => {
+  const { promiseInProgress } = usePromiseTracker();
+
+  return (
+    <header className="container pt-18 pb-5 text-center">
+      <h1 className="mx-auto w-80 font-mono break-words text-xl font-bold uppercase leading-10">
+        You favorite pasta
+      </h1>
+
+      <div className="pt-10 grid grid-cols-3 xs:grid-cols-2">
+        <div className="my-auto col-start-2 xs:col-start-1">
+          <button type="button" onClick={setRandomPost}>
+            <Image className={promiseInProgress ? "spinner-border animate-spin" : null} src={RefreshSVG} width={30}
+                   height={30} />
+            <span className="text-10 font-mono ml-4 align-super uppercase">Другая паста</span>
+          </button>
+        </div>
+        <div className="ml-auto">
+          <Link href="/add_article">
+            <Image className="cursor-pointer" src={AddSVG} width={70} height={70}></Image>
+          </Link>
+        </div>
       </div>
-      <Image src={AddSVG} width={70} height={70} />
-    </div>
-  </header>
-);
+    </header>
+  );
+};
+
+Header.propTypes = {
+  setRandomPost: PropTypes.func.isRequired
+};
 
 export default Header;
