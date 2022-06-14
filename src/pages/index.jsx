@@ -3,7 +3,7 @@
 import React, { useEffect } from "react";
 
 import Post from "components/shared/post";
-import useRandomPost from "components/shared/post/useRandomPost";
+import useRandomPost from "hooks/useRandomPost";
 import LayoutMain from "layouts/layouts/layout-main";
 
 const Home = () => {

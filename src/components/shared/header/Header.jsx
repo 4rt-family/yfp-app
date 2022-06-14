@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import PropTypes from "prop-types";
 import React from "react";
 import { usePromiseTracker } from "react-promise-tracker";
@@ -12,12 +13,12 @@ const Header = ({ setRandomPost }) => {
 
   return (
     <header className="container pt-18 pb-5 text-center">
-      <h1 className="mx-auto w-80 font-mono break-words text-xl font-bold uppercase leading-11">
+      <h1 className="mx-auto w-80 font-mono break-words text-xl font-bold uppercase leading-10">
         You favorite pasta
       </h1>
 
-      <div className="pt-10 grid grid-cols-3">
-        <div className="my-auto col-start-2">
+      <div className="pt-10 grid grid-cols-3 xs:grid-cols-2">
+        <div className="my-auto col-start-2 xs:col-start-1">
           <button type="button" onClick={setRandomPost}>
             <Image className={promiseInProgress ? "spinner-border animate-spin" : null} src={RefreshSVG} width={30}
                    height={30} />
@@ -25,7 +26,9 @@ const Header = ({ setRandomPost }) => {
           </button>
         </div>
         <div className="ml-auto">
-          <Image src={AddSVG} width={70} height={70} />
+          <Link href="/add_article">
+            <Image className="cursor-pointer" src={AddSVG} width={70} height={70}></Image>
+          </Link>
         </div>
       </div>
     </header>
