@@ -20,5 +20,5 @@ COPY --from=builder /yfp-app/package.json ./package.json
 COPY --from=builder /yfp-app/.next ./.next
 COPY --from=builder /yfp-app/node_modules ./node_modules
 
-EXPOSE 3000
+EXPOSE 80/tcp
 CMD ["npm", "start"]
