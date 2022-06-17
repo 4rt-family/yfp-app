@@ -6,16 +6,14 @@ import { usePromiseTracker } from "react-promise-tracker";
 
 import AddSVG from "./images/add.url.svg";
 import RefreshSVG from "./images/refresh.url.svg";
-
+import Logo from "./images/logo.url.svg";
 
 const Header = ({ setRandomPost }) => {
   const { promiseInProgress } = usePromiseTracker();
 
   return (
     <header className="container pt-18 pb-5 text-center">
-      <h1 className="mx-auto w-80 font-mono break-words text-xl font-bold uppercase leading-10">
-        You favorite pasta
-      </h1>
+      <Image className="mx-auto" src={Logo} width={298} height={135} alt="logo" />
 
       <div className="pt-10 grid grid-cols-3 xs:grid-cols-2">
         <div className="my-auto col-start-2 xs:col-start-1">
