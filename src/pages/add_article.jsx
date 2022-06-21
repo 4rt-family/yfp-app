@@ -1,17 +1,18 @@
-import React, { useState } from "react";
+import React, { useState } from 'react';
 
 const AddArticle = () => {
+  const [title, setTitle] = useState('');
+  const [article, setArticle] = useState('');
 
-  const [title, setTitle] = useState("");
-  const [article, setArticle] = useState("");
+  const API_URL = process.env.NEXT_PUBLIC_API_URL;
 
   const submitForReview = async ({ title, article }) => {
-    await fetch("/api/create_pasta", {
-      method: "POST",
+    await fetch(`${API_URL}/api/create_pasta`, {
+      method: 'POST',
       body: JSON.stringify({
         title,
-        content: article
-      })
+        content: article,
+      }),
     });
   };
 
@@ -25,37 +26,43 @@ const AddArticle = () => {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div
-        className="container drop-shadow-[0px 0px 100px rgba(0, 0, 0, 0.05)] rounded-[32px] bg-white px-25 pb-25 md:pb-10 md:px-10 sm:px-5 sm:pb-10">
-
+      <div className="container drop-shadow-[0px 0px 100px rgba(0, 0, 0, 0.05)] rounded-[32px] bg-white px-25 pb-25 md:px-10 md:pb-10 sm:px-5 sm:pb-10">
         <div className="text-center">
-          <h3 className="text-md pt-15 font-bold">Добавь свою пасту</h3>
+          <h3 className="pt-15 text-md font-bold">Добавь свою пасту</h3>
           <p>и когда-нибудь мы её посмотрим</p>
         </div>
 
         <div className="pb-7">
-          <label className="text-sm font-bold" htmlFor="title">Заголовок пасты</label>
-          <input className="w-full px-5 py-2 rounded-lg" type="text" id="title" required onChange={handleTitleChange} />
+          <label className="text-sm font-bold" htmlFor="title">
+            Заголовок пасты
+          </label>
+          <input
+            className="w-full rounded-lg px-5 py-2"
+            type="text"
+            id="title"
+            required
+            onChange={handleTitleChange}
+          />
         </div>
 
         <label className="text-sm font-bold" htmlFor="article">
           Текст пасты
         </label>
         <div className="mt-1">
-        <textarea
-          className="shadow-sm block w-full sm:text-sm border-gray-300 rounded-md"
-          rows={15}
-          name="article"
-          id="article"
-          required
-          onChange={handleArticleChange}
-        />
+          <textarea
+            className="border-gray-300 block w-full rounded-md shadow-sm sm:text-sm"
+            rows={15}
+            name="article"
+            id="article"
+            required
+            onChange={handleArticleChange}
+          />
         </div>
 
         <input
-          className="mt-10 block mx-auto items-center px-6 py-3 border-[2px] rounded-[15px] border-black text-base font-medium rounded-md shadow-sm text-black"
+          className="mx-auto mt-10 block items-center rounded-[15px] rounded-md border-[2px] border-black px-6 py-3 text-base font-medium text-black shadow-sm"
           type="submit"
-          value={"Отправить на модерацию"}
+          value="Отправить на модерацию"
         />
       </div>
     </form>

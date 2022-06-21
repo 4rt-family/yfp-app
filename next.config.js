@@ -1,3 +1,7 @@
+require('dotenv').config();
+
+console.log(process.env);
+
 module.exports = {
   poweredByHeader: false,
   webpack(config) {

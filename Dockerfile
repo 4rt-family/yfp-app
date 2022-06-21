@@ -4,6 +4,7 @@ COPY package.json package-lock.json ./
 RUN npm ci
 
 FROM node:lts as builder
+ENV NODE_ENV = production
 WORKDIR /yfp-app
 COPY . .
 COPY --from=dependencies /yfp-app/node_modules ./node_modules
@@ -11,14 +12,15 @@ RUN npm run build
 
 FROM node:lts as runner
 WORKDIR /yfp-app
-ENV AIRTABLE_API_KEY=""
-ENV AIRTABLE_PASTAS_TABLE_NAME=""
-ENV AIRTABLE_TABLE_BASE=""
 
 COPY --from=builder /yfp-app/public ./public
 COPY --from=builder /yfp-app/package.json ./package.json
 COPY --from=builder /yfp-app/.next ./.next
 COPY --from=builder /yfp-app/node_modules ./node_modules
+COPY --from=builder /yfp-app/next.config.js ./
+COPY --from=builder /yfp-app/.env ./
 
 EXPOSE 80/tcp
+ENV PORT 80
+
 CMD ["npm", "start"]

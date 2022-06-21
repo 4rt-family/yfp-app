@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start -H 0.0.0.0 -p 80",
+    "start": "next start -H 0.0.0.0",
     "format": "prettier --write .",
     "lint": "npm run lint:js & npm run lint:styles",
     "lint:fix": "npm run lint:js:fix & npm run lint:styles:fix",
@@ -20,6 +20,7 @@
     "@tailwindcss/forms": "^0.5.2",
     "airtable": "^0.11.3",
     "clsx": "^1.1.1",
+    "dotenv": "^16.0.1",
     "file-loader": "^6.2.0",
     "next": "^12.1.0",
     "prop-types": "^15.8.1",
