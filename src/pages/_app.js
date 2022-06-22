@@ -8,7 +8,6 @@ const MyApp = ({ Component, pageProps }) => (
     <Head>
       <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
     </Head>
-    // eslint-disable-next-line react/jsx-filename-extension
     <Component {...pageProps} />
   </>
 );
