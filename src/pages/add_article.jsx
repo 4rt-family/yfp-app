@@ -30,7 +30,7 @@ const AddArticle = () => {
           <p>и когда-нибудь мы её посмотрим</p>
         </div>
 
-        <div className="pb-7">
+        <div className="pb-7 pt-10">
           <label className="text-sm font-bold" htmlFor="title">
             Заголовок пасты
           </label>
