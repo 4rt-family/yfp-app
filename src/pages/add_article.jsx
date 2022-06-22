@@ -4,10 +4,8 @@ const AddArticle = () => {
   const [title, setTitle] = useState('');
   const [article, setArticle] = useState('');
 
-  const API_URL = process.env.NEXT_PUBLIC_API_URL;
-
   const submitForReview = async ({ title, article }) => {
-    await fetch(`${API_URL}/api/create_pasta`, {
+    await fetch('/api/create_pasta', {
       method: 'POST',
       body: JSON.stringify({
         title,
