@@ -18,7 +18,7 @@ COPY --from=builder /yfp-app/package.json ./package.json
 COPY --from=builder /yfp-app/.next ./.next
 COPY --from=builder /yfp-app/node_modules ./node_modules
 COPY --from=builder /yfp-app/next.config.js ./
-COPY --from=builder /yfp-app/.env ./
+
 
 EXPOSE 80/tcp
 ENV PORT 80
