@@ -65,6 +65,16 @@ module.exports = {
         10: '40px',
         11: '43px',
       },
+      animation: {
+        'reverse-spin': 'reverse-spin 1s linear infinite',
+      },
+      keyframes: {
+        'reverse-spin': {
+          from: {
+            transform: 'rotate(360deg)',
+          },
+        },
+      },
     },
     colors: ({ colors }) => ({
       inherit: colors.inherit,
@@ -84,5 +94,5 @@ module.exports = {
       xs: { max: '432px' },
     },
   },
-  plugins: [require('tailwindcss-safe-area'),require('@tailwindcss/forms'),],
+  plugins: [require('tailwindcss-safe-area'), require('@tailwindcss/forms')],
 };

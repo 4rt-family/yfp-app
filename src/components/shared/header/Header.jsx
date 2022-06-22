@@ -19,7 +19,7 @@ const Header = ({ setRandomPost }) => {
         <div className="col-start-2 my-auto xs:col-start-1">
           <button type="button" onClick={setRandomPost}>
             <Image
-              className={promiseInProgress ? 'spinner-border animate-spin' : null}
+              className={promiseInProgress ? 'animate-reverse-spin' : null}
               src={RefreshSVG}
               width={30}
               height={30}
