@@ -28,7 +28,7 @@ const Header = ({ setRandomPost }) => {
           </button>
         </div>
         <div className="ml-auto">
-          <Link href="/add_article">
+          <Link href="/src/pages/add_article">
             <Image className="cursor-pointer" src={AddSVG} width={70} height={70} />
           </Link>
         </div>
