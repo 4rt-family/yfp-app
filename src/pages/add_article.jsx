@@ -27,7 +27,7 @@ const AddArticle = () => {
       <div className="container drop-shadow-[0px 0px 100px rgba(0, 0, 0, 0.05)] rounded-[32px] bg-white px-25 pb-25 md:px-10 md:pb-10 sm:px-5 sm:pb-10">
         <div className="text-center">
           <h3 className="pt-15 text-md font-bold">Добавь свою пасту</h3>
-          <p>и когда-нибудь мы её посмотрим</p>
+          <p className="pt-5">и когда-нибудь мы её посмотрим</p>
         </div>
 
         <div className="pb-7 pt-10">
@@ -48,7 +48,7 @@ const AddArticle = () => {
         </label>
         <div className="mt-1">
           <textarea
-            className="border-gray-300 block w-full rounded-md shadow-sm sm:text-sm"
+            className="border-gray-300 block w-full resize-none rounded-md shadow-sm md:resize-y sm:text-sm"
             rows={15}
             name="article"
             id="article"

@@ -91,7 +91,7 @@ module.exports = {
       lg: { max: '1279px' },
       md: { max: '1023px' },
       sm: { max: '767px' },
-      xs: { max: '432px' },
+      xs: { max: '455px' },
     },
   },
   plugins: [require('tailwindcss-safe-area'), require('@tailwindcss/forms')],
